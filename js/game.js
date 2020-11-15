@@ -101,7 +101,7 @@ class Game{
                  }
                  
                   if (player.index !== null) {
-                     fruits.hide();
+                    fruits.destroy();
                   }
                 
 
