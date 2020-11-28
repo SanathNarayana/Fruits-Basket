@@ -63,9 +63,9 @@ class Game{
 
                          
                      }
-                    
-                     
-                 
+                     textSize(20);
+                     text("Player1 Score:"+allPlayers.player1.score, 50, 50);
+                     text("Player2 Score:"+allPlayers.player2.score, 50, 100);                   
                  }
                 
                 
@@ -101,8 +101,15 @@ class Game{
                  }
                  
                   if (player.index !== null) {
-                    fruits.destroy();
-                  }
+                    for (var i=0;i<fruitGroup.length;i++){
+                        if (fruitGroup[i].isTouching(players)){
+                            fruitGroup[i].destroy();
+                            player.score=player.score+1;
+                            player.update();
+
+                        }
+                    }
+                }
                 
 
          
